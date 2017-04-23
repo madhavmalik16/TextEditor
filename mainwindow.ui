@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuExport_As">
+     <property name="title">
+      <string>Export As</string>
+     </property>
+     <addaction name="actionPDF"/>
+     <addaction name="actionHTML"/>
+     <addaction name="actionXML"/>
+    </widget>
+    <addaction name="actionNew"/>
+    <addaction name="actionNew_Window"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionOpen_Project_s"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="actionClose"/>
+    <addaction name="actionClose_Window"/>
+    <addaction name="actionReopen_Project"/>
+    <addaction name="actionReopen_Last_Item"/>
+    <addaction name="actionProperties"/>
+    <addaction name="actionPage_Setup"/>
+    <addaction name="menuExport_As"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionPrint_Preview"/>
+    <addaction name="actionClose_All_Tabs"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuBookmark">
+     <property name="title">
+      <string>Bookmark</string>
+     </property>
+     <addaction name="actionNext"/>
+     <addaction name="actionPrevious"/>
+     <addaction name="actionToggle"/>
+     <addaction name="actionDelete_2"/>
+    </widget>
+    <widget class="QMenu" name="menuChange_Case">
+     <property name="title">
+      <string>Change Case</string>
+     </property>
+     <addaction name="actionUppercase"/>
+     <addaction name="actionLowercase"/>
+    </widget>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionSelect_All"/>
+    <addaction name="actionIndent"/>
+    <addaction name="actionOutdent"/>
+    <addaction name="menuBookmark"/>
+    <addaction name="actionPreferences"/>
+    <addaction name="actionFolding"/>
+    <addaction name="actionSnippet"/>
+    <addaction name="actionTime_Date"/>
+    <addaction name="menuChange_Case"/>
+   </widget>
+   <widget class="QMenu" name="menuFind">
+    <property name="title">
+     <string>Find</string>
+    </property>
+    <addaction name="actionSearch"/>
+    <addaction name="actionFind_Next"/>
+    <addaction name="actionFind_Previous"/>
+    <addaction name="actionReplace"/>
+    <addaction name="actionQuick_FInd"/>
+    <addaction name="actionFind_in_Files"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionFont_2"/>
+    <addaction name="actionTree_View"/>
+    <addaction name="actionNext_Tab_2"/>
+    <addaction name="actionPrevious_Tab"/>
+    <addaction name="actionHide_Tab"/>
+    <addaction name="actionChange_Color"/>
+    <addaction name="actionEnter_Fullscreen"/>
+    <addaction name="actionMinimize"/>
+    <addaction name="actionHide_Minimap"/>
+    <addaction name="actionWord_Wrap"/>
+    <addaction name="actionSpell_Check"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionWord_Count"/>
+    <addaction name="actionBracket_Matcher"/>
+    <addaction name="actionSelect_Inside_of_Brackets"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFind"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionNew_Window">
+   <property name="text">
+    <string>New Window</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionOpen_Project_s">
+   <property name="text">
+    <string>Open Project(s)</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionClose_Window">
+   <property name="text">
+    <string>Close Window</string>
+   </property>
+  </action>
+  <action name="actionReopen_Project">
+   <property name="text">
+    <string>Reopen Project</string>
+   </property>
+  </action>
+  <action name="actionReopen_Last_Item">
+   <property name="text">
+    <string>Reopen Last Item</string>
+   </property>
+  </action>
+  <action name="actionProperties">
+   <property name="text">
+    <string>Properties</string>
+   </property>
+  </action>
+  <action name="actionPage_Setup">
+   <property name="text">
+    <string>Page Setup</string>
+   </property>
+  </action>
+  <action name="actionPDF">
+   <property name="text">
+    <string>PDF</string>
+   </property>
+  </action>
+  <action name="actionHTML">
+   <property name="text">
+    <string>HTML</string>
+   </property>
+  </action>
+  <action name="actionXML">
+   <property name="text">
+    <string>XML</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionPrint_Preview">
+   <property name="text">
+    <string>Print Preview</string>
+   </property>
+  </action>
+  <action name="actionClose_All_Tabs">
+   <property name="text">
+    <string>Close All Tabs</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionSelect_All">
+   <property name="text">
+    <string>Select All</string>
+   </property>
+  </action>
+  <action name="actionIndent">
+   <property name="text">
+    <string>Indent</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </action>
+  <action name="actionToggle">
+   <property name="text">
+    <string>Toggle</string>
+   </property>
+  </action>
+  <action name="actionDelete_2">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionOutdent">
+   <property name="text">
+    <string>Outdent</string>
+   </property>
+  </action>
+  <action name="actionFolding">
+   <property name="text">
+    <string>Folding</string>
+   </property>
+  </action>
+  <action name="actionSnippet">
+   <property name="text">
+    <string>Snippet</string>
+   </property>
+  </action>
+  <action name="actionTime_Date">
+   <property name="text">
+    <string>Date/Time</string>
+   </property>
+  </action>
+  <action name="actionUppercase">
+   <property name="text">
+    <string>Uppercase</string>
+   </property>
+  </action>
+  <action name="actionLowercase">
+   <property name="text">
+    <string>Lowercase</string>
+   </property>
+  </action>
+  <action name="actionSearch">
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </action>
+  <action name="actionFind_Next">
+   <property name="text">
+    <string>Find Next</string>
+   </property>
+  </action>
+  <action name="actionFind_Previous">
+   <property name="text">
+    <string>Find Previous</string>
+   </property>
+  </action>
+  <action name="actionReplace">
+   <property name="text">
+    <string>Replace</string>
+   </property>
+  </action>
+  <action name="actionQuick_FInd">
+   <property name="text">
+    <string>Quick FInd</string>
+   </property>
+  </action>
+  <action name="actionFind_in_Files">
+   <property name="text">
+    <string>Find in Files</string>
+   </property>
+  </action>
+  <action name="actionNext_Tab">
+   <property name="text">
+    <string>Enlarge Font</string>
+   </property>
+  </action>
+  <action name="actionNext_Tab_2">
+   <property name="text">
+    <string>Next Tab</string>
+   </property>
+  </action>
+  <action name="actionPrevious_Tab">
+   <property name="text">
+    <string>Previous Tab</string>
+   </property>
+  </action>
+  <action name="actionChange_Color">
+   <property name="text">
+    <string>Change Color</string>
+   </property>
+  </action>
+  <action name="actionHide_Tab">
+   <property name="text">
+    <string>Hide Tab</string>
+   </property>
+  </action>
+  <action name="actionEnter_Fullscreen">
+   <property name="text">
+    <string>Enter Fullscreen</string>
+   </property>
+  </action>
+  <action name="actionHide_Minimap">
+   <property name="text">
+    <string>Hide Minimap</string>
+   </property>
+  </action>
+  <action name="actionWord_Wrap">
+   <property name="text">
+    <string>Word Wrap</string>
+   </property>
+  </action>
+  <action name="actionTree_View">
+   <property name="text">
+    <string>Tree View</string>
+   </property>
+  </action>
+  <action name="actionSpell_Check">
+   <property name="text">
+    <string>Spell Check</string>
+   </property>
+  </action>
+  <action name="actionWord_Count">
+   <property name="text">
+    <string>Word Count</string>
+   </property>
+  </action>
+  <action name="actionBracket_Matcher">
+   <property name="text">
+    <string>Bracket Matcher</string>
+   </property>
+  </action>
+  <action name="actionSelect_Inside_of_Brackets">
+   <property name="text">
+    <string>Select Inside of Brackets</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionMinimize">
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="text">
+    <string>Text</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionItalic">
+   <property name="text">
+    <string>Italic</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="text">
+    <string>Underline</string>
+   </property>
+  </action>
+  <action name="action10">
+   <property name="text">
+    <string>10</string>
+   </property>
+  </action>
+  <action name="actionFont_2">
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>textEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
